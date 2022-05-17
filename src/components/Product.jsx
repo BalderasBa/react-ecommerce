@@ -60,13 +60,12 @@ const Icon = styled.div`
 `;
 
 const Product = ({ item }) => {
-  
   return (
     <Container>
       <Image src={item.img} />
       <Info>
         <Icon>
-          <Link to={`/products/${item.id}`}>
+          <Link to={`/react-ecommerce/product/${item.id}`}>
             <ShoppingCartOutlined />
           </Link>
         </Icon>

@@ -79,6 +79,7 @@ export const popularProducts = [
 ];
 //
 //
+// from here not implimented yet
 //
 export const users = [
   {
@@ -128,7 +129,7 @@ export const cart = {
       id: 1,
       title: "product 1",
       desc: "desc 1",
-      img: "https://i.ibb.co/WF5tVV1/bg-2.jpg",
+      img: "https://i.ibb.co/NpJzHCV/Origen-Sahara-Date-V2-1800x1800.jpg",
       size: "L",
       color: "red",
       price: 123,
@@ -138,7 +139,7 @@ export const cart = {
       id: 2,
       title: "product 2",
       desc: "desc 2",
-      img: "https://i.ibb.co/WF5tVV1/bg-2.jpg",
+      img: "https://i.ibb.co/LCZJSms/RG-B-A-1800x1800.jpg",
       size: "M",
       color: "green",
       price: 321,

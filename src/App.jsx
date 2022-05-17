@@ -12,24 +12,24 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index path="/" element={<Home />} />
-        <Route path="/products/">
+        <Route path="/react-ecommerce/" exact element={<Home />} />
+        <Route path="/react-ecommerce/products/">
           <Route path=":category" element={<ProductList />} />
         </Route>
-        <Route path="/product/">
+        <Route path="/react-ecommerce/product/">
           <Route path=":id" element={<Product />} />
         </Route>
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/react-ecommerce/cart" element={<Cart />} />
 
         <Route
-          path="/signin"
-          // element={user ? <Navigate to="/" /> : <Login />}
+          path="/react-ecommerce/signin"
+          // element={user ? <Navigate to="/react-ecommerce/" /> : <Login />}
           element={<Login />}
         />
 
         <Route
-          path="/signup"
-          // element={user ? <Navigate to="/" /> : <Register />}
+          path="/react-ecommerce/signup"
+          // element={user ? <Navigate to="/react-ecommerce/" /> : <Register />}
           element={<Register />}
         />
       </Routes>

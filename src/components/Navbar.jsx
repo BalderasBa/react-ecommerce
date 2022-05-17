@@ -4,6 +4,7 @@ import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 import { Link } from "react-router-dom";
+import { cart } from "../data";
 
 const Container = styled.div`
   height: 60px;
@@ -26,8 +27,12 @@ const Left = styled.div`
 
 const Language = styled.span`
   font-size: 14px;
-  cursor: pointer;
   ${mobile({ display: "none" })}
+  select {
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
 `;
 
 const SearchContainer = styled.div`
@@ -53,7 +58,7 @@ const Center = styled.div`
 
 const Logo = styled.h1`
   font-weight: bold;
-  color: teal;
+  color: #daac08;
   cursor: pointer;
   ${mobile({ fontSize: "24px" })}
 `;
@@ -79,23 +84,29 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <Language>EN</Language>
+          <Language>
+            <select>
+              <option value="en">ENG</option>
+              <option value="ar">ARB</option>
+              <option value="fr">FRN</option>
+            </select>
+          </Language>
           <SearchContainer>
             <Input placeholder="Search" />
             <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
         </Left>
         <Center>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/react-ecommerce/" style={{ textDecoration: "none" }}>
             <Logo>YEHYA Shop</Logo>
           </Link>
         </Center>
         <Right>
-          <MenuItem href="/signup">REGISTER</MenuItem>
-          <MenuItem href="/signin">SIGN IN</MenuItem>
-          <Link to="/cart">
+          <MenuItem href="/react-ecommerce/signup">SIGN UP</MenuItem>
+          <MenuItem href="/react-ecommerce/signin">SIGN IN</MenuItem>
+          <Link to="/react-ecommerce/cart">
             <MenuItem>
-              <Badge badgeContent={4} color="primary">
+              <Badge badgeContent={cart.products.length} color="primary">
                 <ShoppingCartOutlined />
               </Badge>
             </MenuItem>

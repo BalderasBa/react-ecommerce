@@ -48,7 +48,7 @@ const CategoryItem = ({ item }) => {
       <Image src={item.img} />
       <Info>
         <Title>{item.title}</Title>
-        <Link to={`/products/${item.cat}`}>
+        <Link to={`/react-ecommerce/products/${item.cat}`}>
           <Button>SHOP NOW</Button>
         </Link>
       </Info>

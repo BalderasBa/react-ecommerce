@@ -24,7 +24,7 @@ const Left = styled.div`
 
 const Logo = styled.h1`
   cursor: pointer;
-  color: teal;
+  color: #daac08;
 `;
 
 const Desc = styled.p`
